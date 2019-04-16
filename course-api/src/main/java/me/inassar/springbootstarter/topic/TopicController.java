@@ -1,9 +1,7 @@
 package me.inassar.springbootstarter.topic;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -21,6 +19,11 @@ public class TopicController {
     @RequestMapping("/topics/{id}")
     public TopicModel getTopic(@PathVariable String id) {
         return topicService.getTopic(id);
+    }
+
+    @RequestMapping(method = RequestMethod.POST, value = "/topics")
+    public void addTopic(@RequestBody TopicModel topic) {
+        topicService.addTopic(topic);
     }
 
 }
