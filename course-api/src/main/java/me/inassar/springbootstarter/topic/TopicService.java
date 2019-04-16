@@ -14,7 +14,12 @@ public class TopicService {
             new TopicModel("Javascript", "Javascript", "Javascript description")
     );
 
-    public List<TopicModel> getTopics() {
+    List<TopicModel> getTopics() {
         return topics;
     }
+
+    TopicModel getTopic(String id) {
+        return topics.stream().filter(topic -> topic.getId().equalsIgnoreCase(id)).findFirst().get();
+    }
+
 }
