@@ -12,7 +12,7 @@ public class TopicController {
 	@RequestMapping("/topics")
 	public List<TopicModel> getAllTopics() {
 		return Arrays.asList(
-				new TopicModel("Spring", "Spring FrameWork", "Spring Framework Description"),
+				new TopicModel("Spring Boot", "Spring Boot FrameWork", "Spring Framework Description"),
 				new TopicModel("Java", "Core Java", "Core Java Description"),
 				new TopicModel("Javascript", "Javascript", "Javascript description")
 				);
