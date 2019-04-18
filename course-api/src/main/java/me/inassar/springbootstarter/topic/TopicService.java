@@ -1,5 +1,6 @@
 package me.inassar.springbootstarter.topic;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -8,6 +9,9 @@ import java.util.List;
 
 @Service
 public class TopicService {
+
+    @Autowired
+    private TopicRepository topicRepository;
 
     // Mocking records
     private List<TopicModel> topics = new ArrayList<>(Arrays.asList(
@@ -18,6 +22,8 @@ public class TopicService {
 
     // Getting all topics from DB
     List<TopicModel> getTopics() {
+        List<TopicModel> topics = new ArrayList<>();
+        topicRepository.findAll().forEach(topics::add);
         return topics;
     }
 
@@ -28,7 +34,7 @@ public class TopicService {
 
     // Adding new topic to old records
     void addTopic(TopicModel topic) {
-        topics.add(topic);
+        topicRepository.save(topic);
     }
 
     // Updating a topic using it's id
@@ -44,6 +50,7 @@ public class TopicService {
 
     // Delete topic using it's id
     void deleteTopic(String id) {
+        topicRepository.delete(id);
         topics.removeIf(topic -> topic.getId().equalsIgnoreCase(id));
     }
 }
