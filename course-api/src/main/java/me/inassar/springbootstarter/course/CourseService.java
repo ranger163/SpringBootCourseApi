@@ -14,9 +14,7 @@ public class CourseService {
 
     // Getting all Courses from DB
     List<CourseModel> getCourses(String topicId) {
-        List<CourseModel> courses = new ArrayList<>();
-        courseRepository.findAll().forEach(courses::add);
-        return courses;
+        return new ArrayList<>(courseRepository.findAllByTopicId(topicId));
     }
 
     // Getting a specific Course using it's id
