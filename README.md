@@ -1,4 +1,4 @@
-![Configuration Screenshot](/images/logo.png)
+![Configuration Screenshot](/course-api/images/logo.png)
 
 # SpringBootCourseApi
 
