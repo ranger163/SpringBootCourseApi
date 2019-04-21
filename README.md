@@ -4,7 +4,14 @@
 
 ## Introduction
 
-This is a training course to learn how to use spring boot framework.
+This is a training course from [JavaBrains]() to learn how to use spring boot framework.
+
+## Values of the course
+
+* Strating a spring boot application
+* Spring MVC
+* Booting spring boot
+* Spring data JPA
 
 ## Requirements
 
