@@ -4,7 +4,7 @@
 
 ## Introduction
 
-This is a training course from [JavaBrains]() to learn how to use spring boot framework.
+This is a training course from [JavaBrains](https://www.youtube.com/playlist?list=PLqq-6Pq4lTTbx8p2oCgcAQGQyqN8XeA1x) to learn how to use spring boot framework.
 
 ## Values of the course
 
